@@ -63,3 +63,30 @@
 .image-modal-close{position:absolute;top:24px;right:30px;width:48px;height:48px;border:1px solid rgba(255,255,255,.45);background:#000;color:#fff;font-size:32px;line-height:1;cursor:pointer;border-radius:0;}
 .image-modal-close:hover{background:var(--maroon);border-color:var(--maroon);}
 @media(max-width:850px){.head-coach-photo{height:420px}.image-modal{padding:20px}.image-modal-close{top:15px;right:15px;width:44px;height:44px}}
+
+/* About MSA — Master Sken desktop composition */
+.about-hero{background:#000 !important;background-image:none !important;}
+.about-hero:before{display:none;}
+.about-masters-section{position:relative;overflow:hidden;background:#000;min-height:760px;padding-top:120px;padding-bottom:120px;}
+.about-masters-inner{position:relative;z-index:3;width:min(760px,72%);margin:auto;}
+.about-main-panel{width:100%;background:#111;}
+.master-sken-side{position:absolute;z-index:2;bottom:0;pointer-events:none;display:flex;align-items:flex-end;}
+.master-sken-side img{display:block;height:min(88vh,900px);width:auto;max-width:none;object-fit:contain;}
+.master-sken-left{left:-120px;}
+.master-sken-right{right:-105px;}
+
+/* Booking is the primary navigation action. */
+.booking-link{background:var(--maroon);padding:11px 17px;border:1px solid var(--maroon);opacity:1 !important;}
+.booking-link:hover{background:#9a0a24;}
+.booking-link.active:after{display:none !important;}
+@media(min-width:851px){
+  .nav .booking-link{order:99;}
+}
+@media(max-width:850px){
+  .nav a{order:3;}
+  .nav a:first-child{order:1;}
+  .nav .booking-link{order:2;width:100%;text-align:left;padding:13px 16px;}
+  .about-masters-section{min-height:auto;padding-top:80px;padding-bottom:80px;}
+  .about-masters-inner{width:100%;}
+  .master-sken-side{display:none;}
+}
