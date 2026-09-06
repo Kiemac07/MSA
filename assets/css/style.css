@@ -30,3 +30,20 @@
 @media(max-width:850px){.head-coach{grid-template-columns:1fr}.coach-photo-placeholder.large{min-height:420px}.coach-copy{padding:45px 28px}.assistant-coaches{grid-template-columns:1fr}.piotr-grid{display:grid}.piotr-photo-placeholder{min-height:380px}.booking-options{grid-template-columns:1fr}.booking-option{border-right:0;border-bottom:1px solid #ccc;padding:40px 25px}.booking-option:last-child{border-bottom:0}}
 
 .bio-copy{color:#555;max-width:560px}.bio-copy p{margin:0 0 16px}.bio-copy p:last-child{margin-bottom:0}
+
+/* Final desktop fighter framing fixes */
+@media(min-width:851px){
+  .fighter-slide:nth-child(2) .fighter-image{object-position:center 18%;}
+  .fighter-slide:nth-child(3) .fighter-image{object-position:center 28%;}
+
+  /* Individual fighter pages: keep the white information panel,
+     but make the area behind the image/panel solid black. */
+  .fighter-detail,
+  .fighter-detail-grid{
+    background:#000 !important;
+    background-image:none !important;
+  }
+}
+
+/* Explicitly prevent any inherited/background photography on fighter detail pages. */
+.fighter-detail:before{background:none !important;content:none !important;}
