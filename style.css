@@ -85,8 +85,22 @@
 @media(max-width:850px){
   .nav a{order:3;}
   .nav a:first-child{order:1;}
-  .nav .booking-link{order:2;width:100%;text-align:left;padding:13px 16px;}
+  .nav .booking-link{order:2;width:max-content;text-align:left;padding:13px 16px;}
   .about-masters-section{min-height:auto;padding-top:80px;padding-bottom:80px;}
   .about-masters-inner{width:100%;}
   .master-sken-side{display:none;}
+}
+
+/* Current-page navigation indicator */
+.nav a.active{color:var(--maroon);}
+.nav .booking-link.active{color:#fff;background:var(--maroon);}
+
+
+/* About MSA — mobile Master Sken side image */
+.master-sken-mobile-right{display:none;}
+@media(max-width:850px){
+  .about-masters-section{position:relative;overflow:hidden;}
+  .master-sken-mobile-right{display:block;position:absolute;z-index:1;right:-92px;bottom:0;width:245px;pointer-events:none;}
+  .master-sken-mobile-right img{display:block;width:100%;height:auto;object-fit:contain;}
+  .about-masters-inner{position:relative;z-index:3;}
 }

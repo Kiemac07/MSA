@@ -19,3 +19,15 @@ if(slides.length){let current=0,timer;const show=i=>{current=(i+slides.length)%s
   modal.addEventListener('click',e=>{if(e.target===modal) hide();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape' && modal.classList.contains('open')) hide();});
 })();
+
+// Highlight the current page in the navigation (including when the mobile menu is open).
+(function(){
+  const links=[...document.querySelectorAll('.nav a')];
+  if(!links.length) return;
+  const current=(window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  const isFighterProfile=window.location.pathname.toLowerCase().includes('/fighters/');
+  links.forEach(link=>{
+    const href=(link.getAttribute('href')||'').split('#')[0].split('/').pop().toLowerCase();
+    if(href===current || (!current && href==='index.html') || (isFighterProfile && href==='fighters.html')) link.classList.add('active');
+  });
+})();
