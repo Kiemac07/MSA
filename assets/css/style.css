@@ -75,6 +75,7 @@
 .master-sken-left{left:-120px;}
 .master-sken-right{right:-105px;}
 .master-sken-mobile-right-new{display:none;}
+.master-sken-mobile-inline{display:none;}
 
 /* Booking is the primary navigation action. */
 .booking-link{background:var(--maroon);padding:11px 17px;border:1px solid var(--maroon);opacity:1 !important;}
@@ -92,6 +93,10 @@
   .master-sken-side{display:none;}
   .master-sken-mobile-right-new{display:block;position:absolute;z-index:2;right:-95px;bottom:0;pointer-events:none;line-height:0;}
   .master-sken-mobile-right-new img{display:block;width:auto;height:520px;max-width:none;object-fit:contain;}
+  .about-page .about-main-panel{background:transparent !important;}
+  .master-sken-mobile-inline{display:block;float:right;width:210px;margin:0 -5px 12px 18px;position:relative;z-index:5;line-height:0;}
+  .master-sken-mobile-inline img{display:block;width:100%;height:auto;}
+  .about-page .about-main-panel h2,.about-page .about-main-panel p,.about-page .about-main-panel .lines{position:relative;z-index:2;}
 }
 
 /* New gym information — training and booking pages only */
@@ -103,3 +108,8 @@
 .about-hero-layout{display:flex;align-items:center;justify-content:center;gap:80px;width:min(1100px,90%);margin:0 auto}.about-hero-copy{text-align:left;max-width:620px}.about-hero-logo{width:min(360px,32vw);flex:0 0 auto}.about-hero-logo img{display:block;width:100%;height:auto;object-fit:contain}
 .about-page .about-masters-section{background:#000;background-image:none;color:#fff}.about-page .about-main-panel{background:#111;color:#fff;border:none;padding:55px}.about-page .about-main-panel h2{color:#fff}.about-page .about-main-panel p{color:#aaa}.about-page .about-main-panel .lines{border-top-color:#333}.about-page .about-main-panel .line{border-bottom-color:#333}.about-page .about-main-panel .line strong{color:#fff}.about-page .about-masters-inner{z-index:3}.about-page .piotr-section{background:#000;color:#fff}.about-page .about-piotr-copy{background:#111;border-top:2px solid var(--maroon);padding:50px 55px}.about-page .about-piotr-copy h2{font-family:'Bebas Neue';font-size:55px;line-height:.95;margin-bottom:20px}.about-page .about-piotr-copy h2 span{color:var(--maroon)}.about-page .about-piotr-copy p{color:#aaa}.about-page .piotr-section .section-kicker{color:#777}.about-page .piotr-photo-placeholder{background:#111}.about-page .piotr-photo-placeholder span{color:#fff}
 @media(max-width:850px){.training-access{grid-template-columns:1fr}.schedule-row{grid-template-columns:1fr;gap:12px;padding:25px 0}.schedule-row h3{font-size:30px}.schedule-row p{font-size:13px}.schedule-row b{min-width:100px}.training-note{display:block}.training-note span{display:block;text-align:left;margin-top:8px}.price-grid{grid-template-columns:1fr}.price-grid article{min-height:auto}.pt-pricing{grid-template-columns:1fr;padding:35px 0}.pt-prices{grid-template-columns:1fr 1fr}.booking-actions{display:block}.booking-actions span{display:block;margin-top:12px}.about-page .about-hero{background:#000 !important;background-image:none !important}.about-hero-layout{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;width:100%;padding:40px 25px}.about-hero-copy{text-align:center;max-width:620px}.about-hero-copy .hero-copy{margin-top:0}.about-hero-logo{width:min(270px,72vw);order:2}.about-hero-copy{display:contents}.about-hero-copy .eyebrow{order:1}.about-hero-copy .display{order:2}.about-hero-logo{order:3}.about-hero-copy .hero-copy{order:4}.about-page .about-main-panel{padding:35px 25px}.about-page .about-piotr-copy{padding:35px 25px}}
+
+/* Desktop header separation: keep the dark aesthetic while clearly defining the header. */
+@media(min-width:851px){
+  .site-header{background:rgba(10,10,10,.96);border-bottom:1px solid #2a2a2a;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+}
